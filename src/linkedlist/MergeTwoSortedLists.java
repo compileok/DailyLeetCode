@@ -11,8 +11,23 @@ package linkedlist;
 public class MergeTwoSortedLists {
 
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-		// TODO
-		 return null;
+		ListNode head = new ListNode(0);
+		ListNode tempNode = head;
+		while(true){
+			if(l1 == null && l2 == null){
+				break;
+			}
+			if((l2 != null) && (l1 == null || l1.val > l2.val)){
+				tempNode.next = l2;
+				tempNode = l2;
+				l2 = l2.next;
+			}else{
+				tempNode.next = l1;
+				tempNode = l1;
+				l1 = l1.next;
+			}
+		}
+		return head.next;
 	}
 	class ListNode {
 		int val;
@@ -21,11 +36,13 @@ public class MergeTwoSortedLists {
 	}
 
 	public static void main(String[] args) {
+
 		MergeTwoSortedLists merge = new MergeTwoSortedLists();
 		ListNode l1 = merge.createNode(new int[]{1,2,4});
 		ListNode l2 = merge.createNode(new int[]{1,3,4});
 		ListNode res = merge.mergeTwoLists(l1,l2);
-		System.out.println(res.val);
+
+		System.out.println(res.next.next.next.val == 3);
 
 	}
 	private  ListNode createNode(int[] datas){
