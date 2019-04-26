@@ -1,7 +1,25 @@
 package string;
 
+/**
+ * Implement function ToLowerCase() that has a string parameter str,
+ * and returns the same string in lowercase.
+ *
+ * Example 1:
+ *
+ * Input: "Hello"
+ * Output: "hello"
+ * Example 2:
+ *
+ * Input: "here"
+ * Output: "here"
+ *
+ */
 public class ToLowerCase {
 
+    /**
+     * Success
+     * Runtime: 1 ms
+     */
     public static String toLowerCase(String str) {
         if(str == null) {
             return null;
