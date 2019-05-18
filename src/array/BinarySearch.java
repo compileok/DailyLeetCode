@@ -27,12 +27,10 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,3,4,5,7,8,9,10,12,13,15,17};
-        System.out.println( 8 == execute(arr,12));
-        System.out.println(2 == execute(arr,4));
-        System.out.println(-1 == execute(arr,2));
-
-
+        int[] sortedArray = new int[]{1,3,4,5,7,8,9,10,12,13,15,17};
+        System.out.println( 8 == execute(sortedArray,12));
+        System.out.println(2 == execute(sortedArray,4));
+        System.out.println(-1 == execute(sortedArray,2));
     }
 
 
