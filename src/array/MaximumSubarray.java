@@ -14,12 +14,21 @@ package array;
 public class MaximumSubarray {
 
 	public int maxSubArray(int[] nums) {
-
-		return 0;
+		int res = Integer.MIN_VALUE;
+		int sum = 0;
+		for(int n : nums){
+			sum = Math.max(sum+n,n);// 如果当前的“和”，小于 n,那么抛弃之前的，从 n 这一位算起，重新往后求和。
+			res = Math.max(res,sum);// 新求的“和”没有原来的大，那么还用上一阶段最大的和。
+		}
+		return res;
 	}
 
-	public static void main(String[] args) {
 
+	public static void main(String[] args) {
+		int [] array = new int[]{-2,1,-3,4,-1,2,1,-5,4};
+		MaximumSubarray test = new MaximumSubarray();
+		int res = test.maxSubArray(array);
+		assert res == 6;
 	}
 
 }
