@@ -42,6 +42,13 @@ public class MergeSortedArray {
         }
     }
 
+    public static void merge1(int[] nums1, int m, int[] nums2, int n) {
+
+
+
+    }
+
+
     public static void main(String[] args) {
         test2();
 

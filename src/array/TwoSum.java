@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * https://leetcode.com/problems/two-sum/
+ *
  * Example ：
  *  Given nums = [2, 7, 11, 15], target = 9,
  *  Because nums[0] + nums[1] = 2 + 7 = 9,
@@ -50,8 +52,8 @@ public class TwoSum {
 	}
 
 	public static void main(String[] args) {
-		//int[] res = towSum1(new int[]{12, 6,3, 11,7, 15},9);
-		int[] res = towSum1(new int[]{0,4,3,0},0);
+		int[] res = towSum1(new int[]{12, 6,1,3, 11,7, 15},9);
+		//int[] res = towSum1(new int[]{0,4,3,0},0);
 		System.out.println(res[0]+"|"+res[1]);
 
 	}
